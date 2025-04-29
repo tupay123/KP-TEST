@@ -56,18 +56,21 @@
         <div class="row">
             @foreach($foods as $food)
             <div class="col-md-4 mb-4">
+
                 <div class="card">
                     @if($food->image)
-                        <img src="{{ asset('storage/' . $food->image) }}" class="card-img-top" alt="{{ $food->name }}">
+                    <img src="{{ asset('storage/' . $food->image) }}" class="card-img-top" alt="{{ $food->name }}">
                     @else
-                        <img src="{{ asset('placeholder-image.jpg') }}" class="card-img-top" alt="No Image">
+                    <img src="{{ asset('placeholder-image.jpg') }}" class="card-img-top" alt="No Image">
                     @endif
                     <div class="card-body">
                         <h5 class="card-title">{{ $food->name }}</h5>
                         <p class="card-text">Rp {{ number_format($food->price, 0, ',', '.') }}</p>
                         <p class="card-text">{{ $food->description }}</p>
                     </div>
+                    <a href="{{ route('pesanan.create', $food->id) }}" class="btn btn-success mt-2">Pesan</a>
                 </div>
+
             </div>
             @endforeach
         </div>
@@ -86,21 +89,21 @@
     <section id="contact" class="container py-5 text-center">
         <h2 class="fw-bold">Hubungi Kami</h2>
         <p>
-            📍 Perum Bumi Purnawira Asri Blok i NO 2 | 
+            📍 Perum Bumi Purnawira Asri Blok i NO 2 |
             <a href="https://wa.me/6281563456382" class="text-decoration-none" target="_blank">
                 📞 0815-6345-6382
             </a>
         </p>
-        
+
         <!-- peta Google Maps -->
         <div class="mt-4">
-            <iframe 
+            <iframe
                 src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d495.0480278716875!2d106.90829694149315!3d-6.963920211624189!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x2e6838063aa20709%3A0xdf8e89171a778bb8!2sJl.%20Perum%20Purnawira%20Asri%20No.2%2C%20Cipanengah%2C%20Kec.%20Lembursitu%2C%20Kota%20Sukabumi%2C%20Jawa%20Barat%2043134!5e0!3m2!1sid!2sid!4v1745612039805!5m2!1sid!2sid"
-                width="100%" 
-                height="450" 
-                style="border:0;" 
-                allowfullscreen="" 
-                loading="lazy" 
+                width="100%"
+                height="450"
+                style="border:0;"
+                allowfullscreen=""
+                loading="lazy"
                 referrerpolicy="no-referrer-when-downgrade">
             </iframe>
         </div>

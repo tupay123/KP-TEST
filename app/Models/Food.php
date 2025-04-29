@@ -9,4 +9,10 @@ class Food extends Model
 {
     use HasFactory;
     protected $fillable = ['name', 'description', 'price', 'image'];
+
+     // Relasi: Satu makanan bisa punya banyak pesanan
+     public function pesanans()
+     {
+         return $this->hasMany(Pesanan::class);
+     }
 }
