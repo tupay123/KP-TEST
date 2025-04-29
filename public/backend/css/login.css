@@ -1,0 +1,134 @@
+:root {
+    --gold-primary: #d4af37;
+    --gold-secondary: #f9d776;
+    --gold-dark: #a17c1a;
+    --black-primary: #0a0a0a;
+    --black-secondary: #121212;
+    --black-accent: #1e1e1e;
+  }
+  
+  body {
+    font-family: "Poppins", sans-serif;
+    background-color: var(--black-primary);
+  }
+  
+  .font-cinzel {
+    font-family: "Cinzel", serif;
+  }
+  
+  .bg-login-image {
+    background: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.85)),
+      url("https://images.unsplash.com/photo-1556911220-e15b29be8c8f?ixlib=rb-1.2.1&auto=format&fit=crop&w=1950&q=80");
+    background-size: cover;
+    background-position: center;
+    background-attachment: fixed;
+  }
+  
+  .gold-text {
+    color: var(--gold-primary);
+  }
+  
+  .gold-gradient-text {
+    background: linear-gradient(135deg, var(--gold-primary) 0%, var(--gold-secondary) 50%, var(--gold-primary) 100%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+  }
+  
+  .gold-border {
+    border-color: var(--gold-primary);
+  }
+  
+  .gold-glow {
+    box-shadow: 0 0 15px rgba(212, 175, 55, 0.3);
+  }
+  
+  .login-card {
+    background: rgba(18, 18, 18, 0.85);
+    backdrop-filter: blur(10px);
+    border: 1px solid rgba(212, 175, 55, 0.3);
+  }
+  
+  .custom-input {
+    background-color: rgba(30, 30, 30, 0.8);
+    border: 1px solid rgba(212, 175, 55, 0.3);
+    color: #e0e0e0;
+    transition: all 0.3s ease;
+  }
+  
+  .custom-input:focus {
+    border-color: var(--gold-primary);
+    box-shadow: 0 0 0 2px rgba(212, 175, 55, 0.25);
+  }
+  
+  .gold-button {
+    background: linear-gradient(135deg, var(--gold-dark) 0%, var(--gold-primary) 100%);
+    color: #000;
+    font-weight: 600;
+    transition: all 0.3s ease;
+  }
+  
+  .gold-button:hover {
+    background: linear-gradient(135deg, var(--gold-primary) 0%, var(--gold-secondary) 100%);
+    transform: translateY(-2px);
+    box-shadow: 0 4px 12px rgba(212, 175, 55, 0.4);
+  }
+  
+  .logo-container {
+    position: relative;
+    width: 120px;
+    height: 120px;
+  }
+  
+  .logo-bg {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: radial-gradient(circle, rgba(212, 175, 55, 0.2) 0%, rgba(10, 10, 10, 0) 70%);
+    border-radius: 50%;
+    animation: pulse 3s infinite;
+  }
+  
+  @keyframes pulse {
+    0% {
+      transform: scale(1);
+      opacity: 0.6;
+    }
+    50% {
+      transform: scale(1.1);
+      opacity: 0.4;
+    }
+    100% {
+      transform: scale(1);
+      opacity: 0.6;
+    }
+  }
+  
+  .noodle-line {
+    position: relative;
+    height: 2px;
+    background: linear-gradient(90deg, transparent, var(--gold-primary), transparent);
+    margin: 20px 0;
+  }
+  
+  .noodle-line::before,
+  .noodle-line::after {
+    content: "";
+    position: absolute;
+    width: 40%;
+    height: 1px;
+    background: linear-gradient(90deg, transparent, var(--gold-primary), transparent);
+  }
+  
+  .noodle-line::before {
+    top: -4px;
+    left: 30%;
+  }
+  
+  .noodle-line::after {
+    bottom: -4px;
+    right: 30%;
+  }
+  
