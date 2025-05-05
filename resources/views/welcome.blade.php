@@ -68,7 +68,7 @@
                         <p class="card-text">Rp {{ number_format($food->price, 0, ',', '.') }}</p>
                         <p class="card-text">{{ $food->description }}</p>
                     </div>
-                    <a href="{{ route('pesanan.create', $food->id) }}" class="btn btn-success mt-2">Pesan</a>
+                    <a href="{{ route('checkout.create', $food->id) }}" class="btn btn-success mt-2">Pesan</a>
                 </div>
 
             </div>

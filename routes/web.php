@@ -17,7 +17,7 @@ Route::get('/dashboard', [DashboardController::class, 'index'])->middleware(['au
 Route::get('/', [WelcomeController::class, 'index']);
 
 // routes/web.php
-Route::get('/pesanan/{id}', [PesananController::class, 'create'])->name('pesanan.create');
+Route::get('/checkout/{id}', [PesananController::class, 'create'])->name('checkout.create');
 Route::post('/pesanan', [PesananController::class, 'store'])->name('pesanan.store');
 
 
